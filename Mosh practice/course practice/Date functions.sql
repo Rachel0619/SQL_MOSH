@@ -1,0 +1,26 @@
+
+-- Date functions in  Mysql
+SELECT NOW(),CURDATE(),CURTIME()
+SELECT YEAR(NOW())
+SELECT MONTH(NOW())
+SELECT DAY(NOW()) --  return number
+SELECT DAYNAME(NOW()) -- return string
+SELECT MONTHNAME(NOW())
+
+-- Exercisse
+SELECT  *
+FROM orders
+WHERE YEAR(order_date)= YEAR(Now());
+
+-- Formatting Dates and Times
+SELECT DATE_FORMAT(NOW(),'%M %d %Y');
+SELECT TIME_FORMAT(NOW(),'%H:%i %p');
+
+-- Calculating dates  and times
+SELECT DATE_ADD(NOW(),INTERVAL 1 DAY); -- ADD ONE DAY
+SELECT DATE_ADD(NOW(),INTERVAL 1 YEAR);-- ADD ONE YEAR
+SELECT DATE_SUB(NOW(),INTERVAL 1 DAY); -- SUBTRACT ONE DAY
+SELECT DATEDIFF('2022-05-20','2022-10-19');
+SELECT TIME_TO_SEC('09:00')-TIME_TO_SEC('09:04');
+
+
